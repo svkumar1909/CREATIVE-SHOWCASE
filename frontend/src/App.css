@@ -1,0 +1,200 @@
+/* ---------- General Reset ---------- */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6f8; /* soft light gray background */
+  color: #333;
+}
+
+/* ---------- Navbar ---------- */
+nav {
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #646cff;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: #e63946;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ---------- Auth Pages ---------- */
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.auth-container:hover {
+  transform: translateY(-3px);
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.auth-container button:hover {
+  background: #4e56d4;
+}
+
+/* ---------- Landing / Masonry Layout ---------- */
+.masonry-layout {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.masonry-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.masonry-item img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+.masonry-item p {
+  padding: 10px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.masonry-item p a {
+  color: #646cff;
+  font-weight: bold;
+}
+
+.masonry-item p a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Profile Page ---------- */
+.profile-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.profile-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.upload-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.upload-section:hover {
+  background: #f9f9f9;
+}
+
+.upload-section input {
+  margin-bottom: 15px;
+}
+
+.upload-section button {
+  background: #646cff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.upload-section button:hover {
+  background: #4e56d4;
+}
+
+/* Profile grid for uploaded artworks */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) { .masonry-layout { column-count: 2; } }
+@media (max-width: 600px) { .masonry-layout { column-count: 1; } }
